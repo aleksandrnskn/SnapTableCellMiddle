@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SnapTableCellMiddle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nN2-vG-qcj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="185" id="Rh4-v1-K8q" customClass="AirplaneViewCell" customModule="SnapTableCellMiddle" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="185"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rh4-v1-K8q" id="68v-Nb-6rB">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="185"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vRu-KL-npI">
+                                                    <rect key="frame" x="20" y="11" width="374" height="163"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTa-vY-AKU">
+                                                    <rect key="frame" x="36" y="43" width="59" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xTa-vY-AKU" firstAttribute="leading" secondItem="68v-Nb-6rB" secondAttribute="leadingMargin" constant="16" id="6Ym-xm-xip"/>
+                                                <constraint firstItem="vRu-KL-npI" firstAttribute="leading" secondItem="68v-Nb-6rB" secondAttribute="leadingMargin" id="G88-v0-9tr"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="vRu-KL-npI" secondAttribute="bottom" id="P8Z-pw-6lr"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="xTa-vY-AKU" secondAttribute="trailing" constant="16" id="cL5-YZ-6uA"/>
+                                                <constraint firstItem="xTa-vY-AKU" firstAttribute="top" secondItem="68v-Nb-6rB" secondAttribute="topMargin" constant="32" id="cS8-qt-Yt4"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="vRu-KL-npI" secondAttribute="trailing" id="lJV-4r-gnn"/>
+                                                <constraint firstItem="vRu-KL-npI" firstAttribute="top" secondItem="68v-Nb-6rB" secondAttribute="topMargin" id="r3h-ku-gm1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="airplaneImageView" destination="vRu-KL-npI" id="oaO-Os-cLQ"/>
+                                            <outlet property="airplaneLabel" destination="xTa-vY-AKU" id="e59-Tv-tG6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="p67-CB-vab"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="H9K-S1-gGc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nN2-vG-qcj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ESP-gL-BJe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nN2-vG-qcj" secondAttribute="bottom" id="Iu3-Fz-yGr"/>
+                            <constraint firstItem="nN2-vG-qcj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Kp9-G4-Yc4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nN2-vG-qcj" secondAttribute="trailing" id="NYv-Gc-LkD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="airplaneTableView" destination="nN2-vG-qcj" id="lNs-6R-lMz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17.39130434782609" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
